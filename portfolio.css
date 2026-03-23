@@ -31,7 +31,7 @@ h4,
 body {
     background-color: var(--bg-color);
     color: var(--text-primary);
-    cursor: url('vs_cursor_pointer.cur'), auto;
+    /* cursor: url('vs_cursor_pointer.cur'), auto; */
     min-height: 100vh;
     padding: 20px;
     z-index: 1;
@@ -95,7 +95,7 @@ nav ul {
 }
 
 nav ul li a {
-    cursor: url('vs_cursor_link.cur'), auto;
+    /* cursor: url('vs_cursor_link.cur'), auto; */
     text-decoration: none;
     color: var(--text-secondary);
     font-weight: 500;
