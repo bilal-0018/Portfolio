@@ -13,10 +13,14 @@
     <link rel="stylesheet" href="portfolio.css">
     <link rel="icon" href="Logo1.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
     <div id="particles-js"></div>
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loader"></div>
+    </div>
 
     <header class="main-header">
         <nav>
@@ -120,11 +124,12 @@
                         <h3>Intermediate Computer Science</h3>
                         <p class="timeline-subtitle">Superior College, RYK</p>
                         <p>Developed a strong foundational understanding of computer science principles, mathematics,
-                            and programming fundamentals. Gained essential exposure to logic building and algorithm design,
+                            and programming fundamentals. Gained essential exposure to logic building and algorithm
+                            design,
                             and acquired practical proficiency in the C programming language.</p>
                     </div>
                 </div>
-                
+
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content card">
@@ -166,7 +171,7 @@
                         <span>JavaScript</span>
                         <span>UI/UX</span>
                     </div>
-                    <a href="#" target="_blank" class="card-btn">View on GitHub <i class="fa-brands fa-github"></i></a>
+                    <a href="https://github.com/bilal-0018" target="_blank" class="card-btn">View on GitHub <i class="fa-brands fa-github"></i></a>
                 </div>
 
                 <div class="card">
@@ -281,6 +286,64 @@
 
             const hiddenElements = document.querySelectorAll('.hidden-section');
             hiddenElements.forEach((el) => observer.observe(el));
+
+            // Form Submission Logic
+            const contactForm = document.querySelector('.contact-form');
+            const loadingOverlay = document.getElementById('loadingOverlay');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    
+                    // Show loading screen
+                    loadingOverlay.style.display = 'flex';
+
+                    const formData = new FormData(contactForm);
+                    const action = contactForm.getAttribute('action');
+
+                    try {
+                        const response = await fetch(action, {
+                            method: 'POST',
+                            body: formData,
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        });
+
+                        if (response.ok) {
+                            // Success popup
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Message Sent!',
+                                text: 'Your message has been sent successfully.',
+                                confirmButtonColor: '#8C99A6',
+                                timer: 3000,
+                                timerProgressBar: true
+                            });
+                            contactForm.reset();
+                        } else {
+                            // Error popup
+                            const data = await response.json();
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Oops...',
+                                text: data.errors ? data.errors.map(error => error.message).join(", ") : "Something went wrong. Please try again later.",
+                                confirmButtonColor: '#8C99A6'
+                            });
+                        }
+                    } catch (error) {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'There was a problem submitting your form. Please check your connection.',
+                            confirmButtonColor: '#8C99A6'
+                        });
+                    } finally {
+                        // Hide loading screen
+                        loadingOverlay.style.display = 'none';
+                    }
+                });
+            }
         });
     </script>
 </body>
