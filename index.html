@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Bilal | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="icon" href="Logo1.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body class="loading-active">
+
+    
+    <div id="mb-loader">
+        <div class="mb-logo-text">MB.</div>
+        <div class="mb-strip"></div>
+        <div class="mb-welcome-msg">Welcome to my portfolio</div>
+    </div>
+    
+
+    <div id="particles-js"></div>
+    
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loader"></div>
+    </div>
+
+    <header class="main-header">
+        <nav>
+            <div class="logo">MB<span class="dot">.</span></div>
+            <ul>
+                <li><a href="#home"><i class="fa-solid fa-house nav-icon"></i><span class="nav-text">Home</span></a>
+                </li>
+                <li><a href="#about"><i class="fa-solid fa-user nav-icon"></i><span class="nav-text">About</span></a>
+                </li>
+                <li><a href="#projects"><i class="fa-solid fa-laptop-code nav-icon"></i><span
+                            class="nav-text">Projects</span></a></li>
+                <li><a href="#contact"><i class="fa-solid fa-envelope nav-icon"></i><span
+                            class="nav-text">Contact</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="greeting" style="font-family: 'Fira Code', monospace; color: var(--accent-light);">
+                        <i class="fa-solid fa-terminal"></i> sys.stdout.write("Hello")
+                    </p>
+                    <h1><span class="highlight">Mohammed Bilal</span></h1>
+                    <p class="subtitle">Full Stack & AI Software Engineer</p>
+                    <p class="hero-description"
+                        style="color: var(--text-secondary); max-width: 500px; margin-bottom: 30px; line-height: 1.6; font-size: 1.05rem;">
+                        I architect scalable web applications and engineer intelligent solutions. Passionate about
+                        transforming complex business requirements into high-performance, elegant software
+                        architectures.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn primary-btn"><i class="fa-solid fa-code"></i> Explore
+                            Projects</a>
+                        <a href="#contact" class="btn secondary-btn"><i class="fa-solid fa-paper-plane"></i> Let's
+                            Connect</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="one.jpg" alt="Mohammed Bilal" class="profile-img">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section glass-panel hidden-section">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-text text-center">
+                <p>I am a dedicated software developer with a strong interest in Artificial Intelligence,
+                    algorithms, and building interactive user experiences. I specialize in transforming complex
+                    technical problems into elegant, highly intuitive digital solutions.</p>
+                <p>With a foundation in <strong>Python and web technologies</strong>, I continuously explore new frameworks and
+                    design patterns to deliver scalable and modern software.</p>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section glass-panel hidden-section" style="margin-top: 60px;">
+            <h2 class="section-title">Skills & Tools</h2>
+
+            <h3 class="subsection-title text-center">Core Technologies</h3>
+            <div class="skills-container center-skills">
+                <span class="skill-tag"><i class="fa-brands fa-python"></i> Python</span>
+                <span class="skill-tag"><i class="fa-brands fa-c"></i> C++</span>
+                <span class="skill-tag"><i class="fa-brands fa-java"></i> Java</span>
+                <span class="skill-tag"><i class="fa-brands fa-html5"></i> HTML5/CSS3</span>
+                <span class="skill-tag"><i class="fa-brands fa-css3"></i> CSS3</span>
+                <span class="skill-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
+                <span class="skill-tag"><i class="fa-solid fa-brain"></i> AI & Search</span>
+                <span class="skill-tag"><i class="fa-solid fa-desktop"></i> GUIs</span>
+            </div>
+
+            <h3 class="subsection-title text-center" style="margin-top: 40px;">Development Tools</h3>
+            <div class="skills-container center-skills">
+                <span class="skill-tag"><i class="fa-brands fa-github"></i> Git / GitHub</span>
+                <span class="skill-tag"><i class="fa-solid fa-code"></i> VS Code</span>
+                <span class="skill-tag"><i class="fa-solid fa-code"></i> Anitgravity</span>
+                <span class="skill-tag"><i class="fa-solid fa-database"></i> Databases</span>
+                <span class="skill-tag"><i class="fa-brands fa-figma"></i> Figma / UI</span>
+                <span class="skill-tag"><i class="fa-solid fa-users"></i> Agile / Scrum</span>
+            </div>
+        </section>
+
+        <section id="projects" class="timeline-section hidden-section">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card">
+                        <div class="timeline-layout">
+                            <div class="timeline-image">
+                                <img src="img1.png" alt="img 1">
+                            </div>
+                            <div class="timeline-text">
+                                <h3>E-commerce Website</h3>
+                                <p class="timeline-subtitle">Electronics Mart - My First Project</p>
+                                <p class="timeline-title2">This is the primary index page for an electronics e-commerce platform. It is built
+                                    using Bootstrap 5 and features a comprehensive product layout including categories
+                                    for mobiles, tablets, and smart home devices. Key functionalities include a price
+                                    range filter, customer review ratings, dynamic promotional banners, and a responsive
+                                    navigation system designed for high-resolution displays.</p>
+                            </div>
+                        </div>
+                        <a href="https://bilal-0018.github.io/Electronics-Mart/" target="_blank" class="card-btn">View
+                            on GitHub <i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card">
+                        <div class="timeline-layout">
+                            <div class="timeline-image">
+                                <img src="img2.png" alt="img 2">
+                            </div>
+                            <div class="timeline-text">
+                                <h3>AI Chatbot</h3>
+                                <p class="timeline-subtitle">Nexus AI Chatbot</p>
+                                <p class="timeline-title2">This is a high-end, cyberpunk-themed landing page designed for an advanced AI
+                                    platform. It features a dark-mode aesthetic with neon accents, utilizing
+                                    glassmorphism and smooth JavaScript transitions to create a seamless, futuristic
+                                    single-page experience.</p>
+                            </div>
+                        </div>
+                        <a href="https://bilal-0018.github.io/Chatbot-AI/" target="_blank" class="card-btn">View on
+                            GitHub <i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card">
+                        <div class="timeline-layout">
+                            <div class="timeline-image">
+                                <img src="img3.png" alt="img 3">
+                            </div>
+                            <div class="timeline-text">
+                                <h3>Text to Particle Animation</h3>
+                                <p class="timeline-subtitle">Interactive Particle Morphing Visualizer</p>
+                                <p class="timeline-title2">This is a creative coding project that utilizes a HTML5 Canvas to render a dynamic 3D
+                                    sphere made of 1,800 animated particles. It features an interactive input system
+                                    where users can type text, causing the particles to transition and morph from their
+                                    spherical shape into the specific letterforms of the entered word using smooth
+                                    easing functions.</p>
+                            </div>
+                        </div>
+                        <a href="https://bilal-0018.github.io/Particle-Text-AI/" target="_blank" class="card-btn">View
+                            on GitHub <i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card">
+                        <div class="timeline-layout">
+                            <div class="timeline-image">
+                                <img src="img4.png" alt="img 4">
+                            </div>
+                            <div class="timeline-text">
+                                <h3>Blog Template</h3>
+                                <p class="timeline-subtitle">Blog Template</p>
+                                <p class="timeline-title2">
+                                    This is a responsive blog layout created using HTML and CSS, inspired by the
+                                    classic W3Schools design structure.
+
+                                    Key Features:
+
+                                    Layout: Employs a two-column grid system for the main content (Blog Posts +
+                                    Sidebar).
+                                    Styling: Utilizes a clean white-on-gray color palette with dark accents, mimicking
+                                    the standard W3S educational theme.
+                                    Typography: Uses a sans-serif font for readability.
+                                    Responsiveness: The layout fluidly adapts to mobile devices, stacking the sidebar
+                                    beneath the main content.
+                                </p>
+                            </div>
+                        </div>
+                        <a href="https://bilal-0018.github.io/Templates/" target="_blank" class="card-btn">View
+                            on GitHub <i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="projects-section hidden-section">
+            <h2 class="section-title">Innovation Hub</h2>
+            <div class="projects-grid">
+
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-table-columns"></i></div>
+                    <h3>Modern UI/UX</h3>
+                    <p>
+                        Developed a modern and user-friendly interface for a web application, focusing on aesthetics,
+                        responsiveness, and ease of use.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-chart-column"></i></div>
+                    <h3>Data Analysis</h3>
+                    <p>
+                        Analyzed large datasets to extract meaningful insights and trends, utilizing statistical
+                        techniques and data visualization tools.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                    <h3>Performance & Scalability</h3>
+                    <p>
+                        Optimized application performance and scalability, ensuring efficient resource utilization and
+                        smooth user experience.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section hidden-section">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="text-center"
+                style="color: var(--text-secondary); margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                I'm currently open for new opportunities and collaborations. Whether you have a question or just want to
+                say hi, I'll try my best to get back to you!</p>
+
+            <div class="contact-grid">
+                <div class="glass-panel contact-info">
+                    <h3 class="subsection-title">Contact Information</h3>
+                    <div class="social-links flex-col" style="margin-top: 25px;">
+                        <a href="https://github.com/bilal-0018" target="_blank"><i class="fa-brands fa-github"></i>
+                            GitHub Profile</a>
+                        <a href="https://www.linkedin.com/in/m-bilal-ahmed-oo18/" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i> LinkedIn Network</a>
+                        <a
+                            href="https://mail.google.com/mail/u/1/#inbox?compose=CllgCJNxNjtwMnLmNnwWnLBNQSwpBFzCtGbSVxZVsNKlwFcSVDCdwbKTlFRrdfwJZwQHKFkMMJV"><i
+                                class="fa-solid fa-envelope"></i> Email Me</a>
+                        <a href="https://wa.me/+923004330784" target="_blank"><i class="fa-brands fa-whatsapp"></i>
+                            Whatsapp Chat</a>
+                    </div>
+                </div>
+                <div class="glass-panel contact-form-container">
+                    <form action="https://formspree.io/f/maqpgqbw" method="POST" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="4" required
+                                placeholder="Hello, I'd like to talk about..."></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn w-100 justify-content-center"
+                            style="margin-top: 10px;">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="justify-content-center scroll">
+        <button id="scrollToTop" title="Go to top">
+            <a href="#home"><i class="fa-solid fa-arrow-up"></i></a>
+        </button>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Mohammed Bilal. Designed & Built with passion.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        setTimeout(() => {
+            const loader = document.getElementById('mb-loader');
+
+            loader.style.opacity = '0';
+
+            setTimeout(() => {
+                loader.style.display = 'none';
+                document.body.classList.remove('loading-active');
+            }, 800);
+
+        }, 4800);
+
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#ffffff" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.4, "random": true },
+                "size": { "value": 3, "random": true },
+                "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.15, "width": 1 },
+                "move": { "enable": true, "speed": 1.5, "direction": "none", "random": true, "out_mode": "out" }
+            },
+            "interactivity": {
+                "detect_on": "window",
+                "events": {
+                    "onhover": { "enable": true, "mode": "grab" },
+                    "onclick": { "enable": true, "mode": "push" },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": { "distance": 220, "line_linked": { "opacity": 0.6 } },
+                    "push": { "particles_nb": 3 }
+                }
+            },
+            "retina_detect": true
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show-section');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            const hiddenElements = document.querySelectorAll('.hidden-section');
+            hiddenElements.forEach((el) => observer.observe(el));
+
+            const contactForm = document.querySelector('.contact-form');
+            const loadingOverlay = document.getElementById('loadingOverlay');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+
+                    loadingOverlay.style.display = 'flex';
+
+                    const formData = new FormData(contactForm);
+                    const action = contactForm.getAttribute('action');
+
+                    try {
+                        const response = await fetch(action, {
+                            method: 'POST',
+                            body: formData,
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        });
+
+                        if (response.ok) {
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Message Sent!',
+                                text: 'Your message has been sent successfully.',
+                                confirmButtonColor: '#8C99A6',
+                                timer: 3000,
+                                timerProgressBar: true
+                            });
+                            contactForm.reset();
+                        } else {
+                            const data = await response.json();
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Oops...',
+                                text: data.errors ? data.errors.map(error => error.message).join(", ") : "Something went wrong. Please try again later.",
+                                confirmButtonColor: '#8C99A6'
+                            });
+                        }
+                    } catch (error) {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'There was a problem submitting your form. Please check your connection.',
+                            confirmButtonColor: '#8C99A6'
+                        });
+                    } finally {
+                        loadingOverlay.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
